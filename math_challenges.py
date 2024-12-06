@@ -58,4 +58,3 @@ def math_challenge_equation():
 
 
 
-
