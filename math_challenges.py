@@ -10,15 +10,19 @@ def math_roulette_challenge():
     if operation == "addition":
         for i in range(5):
             res += list[i]
-        return ans == res
     elif operation == "subtraction":
         for i in range(5):
             res -= list[i]
-        return ans == res
-    elif operation == "addition":
+    elif operation == "multiplication":
+        res = 1
         for i in range(5):
             res *= list[i]
-        return ans == res
+    if ans == res:
+        print("Correct! You win a key.")
+        return True
+    else:
+        print("False! Better luck next time.")
+        return False
 
 
 def factorial(n):
@@ -55,6 +59,17 @@ def math_challenge_equation():
     else:
         print("False! Better luck next time.")
         return False
+
+def math_challenge():
+    challenges = [math_challenge_equation, math_challenge_factorial, math_roulette_challenge]
+    challenge = r.choice(challenges)
+    challenge()
+
+
+
+
+
+
 
 
 
