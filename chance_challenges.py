@@ -61,13 +61,6 @@ def rolling_dice_game():
 
 
 def chance_challenge():
-    game = ["Shell game", "rolling dice challenge"]
-
-    if choice(game) == "Shell game":
-        print("You'll play the shell game")
-        return shell()
-
-    else :
-        print("You will play the game of the dices")
-        return rolling_dice_game()
+    game = choice([shell, rolling_dice_game])
+    return game()
 
