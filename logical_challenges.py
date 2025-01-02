@@ -4,24 +4,21 @@ from random import randint
 
 def display_grid(grid):
     for line in grid:
-        print("")
+        #print("\n—————————————") optional je trouve que ça rend pas hyper bien
+        print("\n| ", end = "")
 
         for element in line:
             print(element, end = " | ")
 
+
+
 def check_victory(grid, symbol) :
 
-
-    for line in range(len(grid)-1):
+    for line in range(len(grid)):
         check_col = True
         check_line = True
-        check_diag = True
-        for col in range(len(grid)-1):
-            print(col, line, grid[line][col], grid[col][line])
-            print(check_col, check_line, check_diag)
 
-            if col == line and grid[line][col] != symbol:
-                check_diag = False
+        for col in range(len(grid)):
 
             if grid[line][col] != symbol:
                 check_line = False
@@ -29,7 +26,10 @@ def check_victory(grid, symbol) :
             if grid[col][line] != symbol:
                 check_col = False
 
-        if check_col or check_line or check_diag : return True
+        if check_col or check_line : return True
+
+    if grid[0][0] == grid [1][1] == grid [2][2] == symbol : return True
+    if grid[0][2] == grid[1][1] == grid[2][0] == symbol : return True
 
     return False
 
@@ -77,14 +77,14 @@ def master_move(grid, symbol):
 
     while True:
         line, column = randint(0, len(grid) - 1), randint(0, len(grid) - 1)
-        if grid[line, column] == "":
+        if grid[line][column] == "":
             return line,column
 
 
 
 
 def player_turn(grid):
-    line = int(input("Enter coordinates of the line where you want to play: "))
+    line = int(input("\n\nEnter coordinates of the line where you want to play: "))
     col = int(input("Enter coordinates of the col where you want to play: "))
 
     while grid[line][col] != "" :
@@ -136,12 +136,15 @@ def tictactoe_game():
         if check_result(grid) == "X":
             print("You won the tictactoe!")
             return True
+
+        if check_result(grid) :                         #must be there because if the grid is full it can only be after the player turn
+            print("it's a draw, you lose")
+            return False
+
         master_turn(grid)
         if check_result(grid) == "O":
             print("The master won, you lost the tictactoe!")
             return False
-        if check_result(grid) :
-            print("it's a draw, you lose")
-            return False
+
 
 
