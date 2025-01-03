@@ -25,7 +25,6 @@ def game():
                 if ele == nb_player:
                     ele['keys_won'] += 1
             keys += 1
-        print(equipe)
     print("And now the treasure room!")
 
 game()
