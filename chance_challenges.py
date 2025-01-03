@@ -61,6 +61,6 @@ def rolling_dice_game():
 
 
 def chance_challenge():
-    game = choice([shell, rolling_dice_game])
-    return game()
+    games = choice([shell, rolling_dice_game])
+    return games()
 

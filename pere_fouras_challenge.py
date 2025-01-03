@@ -22,6 +22,6 @@ def pere_fouras_riddles():
                 print(f"Incorrect ! {attempts} attempts remaining")
             else:
                 print("You failed the challenge ! The correct answer was :", dic['answer'])
-                return True
+                return False
 
 
