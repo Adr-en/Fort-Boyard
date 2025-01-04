@@ -6,9 +6,10 @@ def shell():
     nb_attempt = 2
     shell = ["A", "B", "C"]
 
-    print("Hi, in this game you will compete against the game master,"
-          "You have two attempt to find the shell where the key is randomly placed")
-    print("Choose between the shells A, B and C")               # juste les lettres ou un message qui va avec
+    print("\nHi, in this game you will compete against the game master,"
+          "You have two attempt to find the shell where the key is randomly placed\n")
+    print("Choose between the shells A, B and C :\n")
+    print(" | A | B | C |\n")
 
 
 
@@ -18,13 +19,13 @@ def shell():
         nb_attempt -= 1
 
         myst = choice(shell)
-        player = str(input("Choose a shell")).upper()
+        player = str(input("Choose a shell : ")).upper()
 
 
         if player in shell:
 
             if player == myst:
-                print("You found the right shell!")
+                print("You found the right shell and won the key!\n")
                 return True
             else :
                 print("Ouch, you found the wrong shell!")
@@ -32,12 +33,13 @@ def shell():
         else :
             print("This choice is not valid, try again")
             nb_attempt += 1
-    print("You lost the game, what a bad luck!!")
+    print("You lost the game, what a bad luck!!\n")
     return False
 
 
 
 def rolling_dice_game():
+    print("\nLet's play a rolling dice game !!!\n")
     nb_attempt = 3
 
     for i in range(nb_attempt):
@@ -52,7 +54,7 @@ def rolling_dice_game():
         dices_mstr = (randint(1, 6), randint(1, 6))
         print(dices_mstr)
         if 6 in dices_mstr:
-            print("You lost, you'll have to find another way to get a key")
+            print("The master won the game, you'll have to find another way to get a key")
             return False
         print("No 6 were obtain, let's try again")
 

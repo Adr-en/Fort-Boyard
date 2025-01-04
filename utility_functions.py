@@ -5,11 +5,11 @@ def upper_case(s):
         return chr(ord(s)-32)
 
 def introduction():
-    print("Hello competitor.")
+    print("\nHello competitor.\n")
     print("So you've decided to take your chance and confront yourself to the fort and its dangers?\nOnly future will tell us if you made a brave or foolish act")
     print("You will have to face various challenges in order to earn keys.")
     print("3 of them will take you to the tresor room, so fight with everything you have!")
-    print("Good luck competitor, and may you come out victorious of the fort")
+    print("Good luck competitor, and may you come out victorious of the fort\n")
     return None
 
 
@@ -20,7 +20,7 @@ def compose_equipe():
     team = []
     for i in range(nb):
         player = {}
-        player['name'] = input(f"Name of the player {i+1} : ")
+        player['name'] = input(f"\nName of the player {i+1} : ")
         player['profession'] = input(f"Profession of the player {i+1} : ")
         while True:
             leader = input('Is the player the leader ("yes" or "no") : ')

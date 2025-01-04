@@ -4,6 +4,7 @@ import json
 import time
 
 def treasure_room():
+    print("\n Find the unknown word with the help of the clues :")
     with open("data/TRClues.json", "r") as f:
 
         tv_game = json.load(f)

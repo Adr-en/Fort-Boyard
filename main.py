@@ -27,5 +27,6 @@ def game():
             keys += 1
         print(equipe)
     print("And now the treasure room!")
+    treasure_room()
 
 game()
