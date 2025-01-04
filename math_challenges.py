@@ -63,7 +63,7 @@ def math_challenge_equation():
 def math_challenge():
     challenges = [math_challenge_equation, math_challenge_factorial, math_roulette_challenge]
     challenge = r.choice(challenges)
-    challenge()
+    return challenge()
 
 
 
