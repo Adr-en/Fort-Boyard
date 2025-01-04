@@ -10,7 +10,7 @@ def introduction():
     print("You will have to face various challenges in order to earn keys.")
     print("3 of them will take you to the tresor room, so fight with everything you have!")
     print("Good luck competitor, and may you come out victorious of the fort\n")
-    return None
+
 
 
 def compose_equipe():
@@ -63,5 +63,4 @@ def choose_player(team):
     return team[player-1]
 
 
-'''def record_history():
-    with open('output/history.txt', 'a') as f:#A compléter selon les données récupérées à la fin'''
+
