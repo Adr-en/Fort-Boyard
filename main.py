@@ -25,7 +25,10 @@ def game():
                 if ele == nb_player:
                     ele['keys_won'] += 1
             keys += 1
+            record_history(chall_sel, nb_player["name"], "game won", keys)
+        else :
+            record_history(chall_sel, nb_player["name"], "game won", keys)
         print(equipe)
     print("And now the treasure room!")
-
+    treasure_room()
 game()
