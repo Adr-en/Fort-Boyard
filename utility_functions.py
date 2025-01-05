@@ -1,9 +1,3 @@
-
-
-def upper_case(s):
-    if ord("z") >= ord(s) >= ord("a"):
-        return chr(ord(s)-32)
-
 def introduction():
     print("\nHello competitor.\n")
     print("So you've decided to take your chance and confront yourself to the fort and its dangers?\nOnly future will tell us if you made a brave or foolish act")

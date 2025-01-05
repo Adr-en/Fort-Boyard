@@ -1,5 +1,5 @@
 from random import randint, choice
-from utility_functions import upper_case
+
 
 
 def shell():
@@ -18,8 +18,8 @@ def shell():
         print(f"you have {nb_attempt} attempt left")
         nb_attempt -= 1
 
-        myst = choice(shell)
-        player = str(input("Choose a shell : ")).upper()
+        myst = choice(shell).lower()
+        player = str(input("Choose a shell : ")).lower()
 
 
         if player in shell:

@@ -36,17 +36,7 @@ def check_victory(grid, symbol) :
 
 
 def master_move(grid, symbol):
-    """La fonction permet de choisir où va jouer le master, d'abord on vérifie si le master peut gagner,
-     ensuite on vérifie si le joueur peut gagner et dans ce cas là on le bloque
-     et sinon le master joue aléatoirement sur une case disponible
-     Input : grid (2D list), symbol(string)
-     Output : """
 
-
-
-
-    #On vérifie si le master peut gagner, pour chaque case, si elle est vide
-    #on vérifie si le master gagne en jouant dessus
     for line in range(len(grid)):
         for column in range(len(grid[line])):
 
@@ -58,8 +48,7 @@ def master_move(grid, symbol):
                 grid[line][column] = ""
 
 
-    #On vérifie si le joueur peut gagner pour chaque case vide,
-    # si il peut le master joue dessus pour le bloquer sinon on remet la case vide
+
     for line in range(len(grid)):
         for column in range(len(grid[line])):
 
@@ -72,7 +61,7 @@ def master_move(grid, symbol):
                     grid[line][column] = ""
 
 
-    #Le master joue aléatoirement sur une des cases disponible
+
 
     while True:
         line, column = randint(0, len(grid) - 1), randint(0, len(grid) - 1)
